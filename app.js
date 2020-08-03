@@ -2,12 +2,15 @@ const express = require('express');
 
 const app = express();
 
+app.set('view engine', 'pug');
+app.set('views', 'views');
+
 app.get('/', (req, res, next) => {
-  res.render();
+  res.render('index', { pageTitle: "Add User" });
 });
 
 app.get('/users', (req, res, next) => {
-  res.render();
+  res.render('users', { pageTitle: 'Users ' });
 });
 
 app.post('/users', (req, res, next) => {
