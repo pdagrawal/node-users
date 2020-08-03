@@ -2,5 +2,5 @@ extends layouts/main.pug
 
 block content
   form(action="/users", method="POST")
-    input(type="text")
+    input(type="text", name="name")
     button(type="submit") Add User
